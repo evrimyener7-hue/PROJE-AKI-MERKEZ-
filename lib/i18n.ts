@@ -6,6 +6,8 @@ export type Dictionary = {
   tagline: string;
   subtitle: string;
   homeIntro: string;
+  workshopFocusTitle: string;
+  workshopFocusText: string;
   homeSections: {
     title: string;
     description: string;
@@ -17,6 +19,7 @@ export type Dictionary = {
     copied: string;
     clarifyFurther: string;
     optional: string;
+    nextStep: string;
   };
 };
 
@@ -25,12 +28,17 @@ export const dictionaries: Record<Locale, Dictionary> = {
     appName: "Proje Akış Merkezi",
     tagline: "Belirsizlikten netliğe, netlikten üretime.",
     subtitle:
-      "Fikirlerini düzenle, proje akışını kur, doğru araçları seç ve AI için güçlü çıktılar üret.",
+      "Fikirleri, proje akışını ve AI üretim adımlarını tek bir atölye düzeninde yönet.",
     homeIntro:
-      "Burada fikirlerini düzenleyebilir, proje adımlarını planlayabilir, uygun araçları seçebilir ve tekrar kullanılabilir promptlar üretebilirsin.",
-    cta: "Çalışma alanına başla",
+      "Bu alan artık iki ana üretim atölyesi etrafında çalışır: Vibe Coding ve Üretken Yapay Zeka. Diğer sayfalar destek katmanı olarak yanında durur.",
+    workshopFocusTitle: "Merkez Atölyeler",
+    workshopFocusText:
+      "Proje yönlendirme + AI üretim planlama + prompt geliştirme + araç seçimi + aşama bazlı ilerleme.",
+    cta: "Atölyeni başlat",
     nav: [
       { label: "Ana Sayfa", href: "/" },
+      { label: "Vibe Coding Atölyesi", href: "/vibe-coding" },
+      { label: "Üretken Yapay Zeka Atölyesi", href: "/generative-ai" },
       { label: "Proje Başlatıcı", href: "/project-starter" },
       { label: "Fikir Netleştirici", href: "/idea-clarifier" },
       { label: "Prompt Oluşturucu", href: "/prompt-builder" },
@@ -40,6 +48,16 @@ export const dictionaries: Record<Locale, Dictionary> = {
       { label: "Öğrenme Modülü", href: "/modules/ornek-modul" }
     ],
     homeSections: [
+      {
+        title: "Vibe Coding Atölyesi",
+        description: "Proje türü seç, brief oluştur, promptla kodla, test et, deploy et.",
+        href: "/vibe-coding"
+      },
+      {
+        title: "Üretken Yapay Zeka Atölyesi",
+        description: "İçerik türüne göre senaryo, görsel, ses, video ve final çıktıyı planla.",
+        href: "/generative-ai"
+      },
       {
         title: "Proje Başlatıcı",
         description: "Kaba fikri hedef, kapsam ve MVP odaklı yapılandır.",
@@ -80,19 +98,25 @@ export const dictionaries: Record<Locale, Dictionary> = {
       copy: "Kopyala",
       copied: "Kopyalandı",
       clarifyFurther: "Biraz daha netleştir",
-      optional: "İsteğe bağlı"
+      optional: "İsteğe bağlı",
+      nextStep: "Sonraki adım"
     }
   },
   en: {
     appName: "Project Flow Hub",
     tagline: "From ambiguity to clarity, from clarity to output.",
     subtitle:
-      "Organize your ideas, map your project flow, choose the right tools, and produce AI-ready outputs.",
+      "Manage ideas, project flow, and AI production steps in one guided workshop structure.",
     homeIntro:
-      "This workspace helps you structure ideas, map project steps, choose tools, and generate reusable prompts.",
-    cta: "Start your workspace",
+      "The platform now centers around two workshop pathways: Vibe Coding and Generative AI. Existing planning pages remain as support layers.",
+    workshopFocusTitle: "Core Workshops",
+    workshopFocusText:
+      "Project guidance + AI production planning + prompt development + tool selection + stage-based execution.",
+    cta: "Start your workshop",
     nav: [
       { label: "Home", href: "/" },
+      { label: "Vibe Coding Workshop", href: "/vibe-coding" },
+      { label: "Generative AI Workshop", href: "/generative-ai" },
       { label: "Project Starter", href: "/project-starter" },
       { label: "Idea Clarifier", href: "/idea-clarifier" },
       { label: "Prompt Builder", href: "/prompt-builder" },
@@ -102,6 +126,16 @@ export const dictionaries: Record<Locale, Dictionary> = {
       { label: "Learning Module", href: "/modules/ornek-modul" }
     ],
     homeSections: [
+      {
+        title: "Vibe Coding Workshop",
+        description: "Select project type, build brief, code via prompts, test, and deploy.",
+        href: "/vibe-coding"
+      },
+      {
+        title: "Generative AI Workshop",
+        description: "Plan scenario, visuals, sound, video, and final output by content type.",
+        href: "/generative-ai"
+      },
       {
         title: "Project Starter",
         description: "Transform rough ideas into goal, scope, and MVP structure.",
@@ -142,7 +176,8 @@ export const dictionaries: Record<Locale, Dictionary> = {
       copy: "Copy",
       copied: "Copied",
       clarifyFurther: "Clarify Further",
-      optional: "Optional"
+      optional: "Optional",
+      nextStep: "Next step"
     }
   }
 };
