@@ -26,6 +26,10 @@ export default function HomePage() {
         <SectionHeader title={dictionary.cta} description={dictionary.homeIntro} />
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {dictionary.homeSections.slice(2, 8).map((section) => (
+      <section className="space-y-6">
+        <SectionHeader title={dictionary.cta} description={dictionary.homeIntro} />
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {dictionary.homeSections.slice(0, 6).map((section) => (
             <FeatureCard key={section.href} title={section.title} description={section.description} href={section.href} />
           ))}
         </div>
@@ -33,6 +37,9 @@ export default function HomePage() {
           title={dictionary.homeSections[8].title}
           description={dictionary.homeSections[8].description}
           href={dictionary.homeSections[8].href}
+          title={dictionary.homeSections[6].title}
+          description={dictionary.homeSections[6].description}
+          href={dictionary.homeSections[6].href}
         />
       </section>
     </div>
